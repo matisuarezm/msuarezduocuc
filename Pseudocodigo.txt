@@ -1,0 +1,37 @@
+INICIO
+
+  DECLARAR variables para la opción del menú, nombre, edad, asiento, descuentos, valores por fila, etc.
+  DECLARAR variables booleanas para estado de los asientos A1 a E5 (todos libres, false)
+
+  REPETIR N VECES // hasta que el usuario indique salir 
+  MOSTRAR menú principal
+  LEER ingreso del usuario //validar que sea número
+  SI la opción es válida ENTONCES
+   SEGÚN opción
+        1.- "Comprar Entrada"
+			PEDIR nombre y validar que no esté vacío
+			PEDIR edad y validar que sea número válido
+			
+			MOSTRAR estado de asientos (libres u ocupados)
+            PEDIR asiento deseado (ejemplo: A1, B3)
+            VALIDAR formato correcto y existencia del asiento
+            VALIDAR que asiento esté dentro del rango (A-E y 1-5)
+            VERIFICAR si asiento está libre
+            SI está ocupado MOSTRAR mensaje y repetir			
+
+			DETERMINAR precio según fila del asiento
+			DETERMINAR si aplica descuento (estudiante o tercera edad)
+			CALCULAR precio final descontando el monto correspondiente
+			
+			PEDIR confirmación para reservar asiento (S/N)
+			SI confirma reservar
+			MARCAR asiento como ocupado (true)
+			SINO repetir ciclo
+
+			GENERAR boleta con detalles de compra
+			PREGUNTAR si desea reimprimir la boleta (S/N)
+          
+        2.- Salir
+			MOSTRAR mensaje de salida y finalizar programa
+
+FIN
